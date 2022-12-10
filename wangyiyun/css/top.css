@@ -1,0 +1,78 @@
+.top {
+    height: 70px;
+    background-color: #242424;
+    border-bottom: 1px solid #000;
+    /**怪异盒模型**/
+    box-sizing: border-box;
+}
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    line-height: 69px;
+    height: 69px;
+}
+
+.top-bar .bar-left {
+    display: flex;
+}
+
+/**设置元素的背景图片（精灵图）**/
+.top-bar .bar-left .logo {
+    background-image: url('../images/topbar_sprite.png');
+}
+
+/**隐藏h1元素下logo的文字 继承父类line-height的属性**/
+.top-bar .bar-left .logo a {
+    display: block;
+    width: 157px;
+    padding-right: 20px;
+    /**设置缩进以实现文本消失**/
+    text-indent: -9999px;
+}
+
+.top-bar .bar-left .list {
+    display: flex;
+}
+
+/**使数组中的a标签继承line-height**/
+.top-bar .bar-left .list .item {
+    position: relative;
+    display: block;
+    padding: 0 20px;
+    font-size: 14px;
+    color: #ccc;
+}
+
+.top-bar .bar-left .list .item:hover,
+.top-bar .bar-left .list .item.active {
+    color: #fff;
+    background-color: #000;
+}
+
+/**导航栏选中的模块显示一个小箭头**/
+.top-bar .bar-left .list .item.active::after {
+    content: "";
+    position: absolute;
+    width: 12px;
+    height: 7px;
+    bottom: -1px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    background: url('../images/topbar_sprite.png') -226px 0;
+}
+
+/**hot标签**/
+.top-bar .bar-left .list .item .icon-hot {
+    position: absolute;
+    top: 21px;
+    left: 100px;
+    width: 28px;
+    height: 19px;
+    background: url('../images/topbar_sprite.png') -190px 0;
+}
+
+
+.bar-right {
+}

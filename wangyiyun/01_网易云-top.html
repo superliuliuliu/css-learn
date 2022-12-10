@@ -4,45 +4,7 @@
     <title>仿网易云头部</title>
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/common.css">
-
-    <style>
-        .top {
-            height: 70px;
-            background-color: #242424;
-            border-bottom: 1px solid #000;
-            /**怪异盒模型**/
-            box-sizing: border-box;
-        }
-
-        .top-bar {
-            display: flex;
-            justify-content: space-between;
-            line-height: 69px;
-            height: 69px;
-        }
-
-        /**设置元素的背景图片（精灵图）**/
-        .top-bar .bar-left .logo {
-            background-image: url('./images/topbar_sprite.png');
-        }
-
-        /**隐藏h1元素下logo的文字**/
-        .top-bar .bar-left .logo a {
-            display: block;
-            width: 157px;
-            padding-right: 20px;
-            /**设置缩进以实现文本消失**/
-            text-indent: -9999px;
-        }
-
-        .bar-left {
-        }
-
-        .bar-right {
-        }
-
-
-    </style>
+    <link rel="stylesheet" href="./css/top.css">
 </head>
 
 <body>
@@ -53,6 +15,19 @@
                 <h1 class="logo">
                     <a href="#">网易云音乐</a>
                 </h1>
+                <ul class="list">
+                    <li><a href="#" class="item active">发现音乐</a></li>
+                    <li><a href="#" class="item">我的音乐</a></li>
+                    <li><a href="#" class="item">关注</a></li>
+                    <li><a href="#" class="item">商城</a></li>
+                    <li><a href="#" class="item">音乐人</a></li>
+                    <li>
+                        <a href="#" class="item">
+                            下载客户端
+                            <i class="icon-hot"></i>
+                        </a>
+                    </li>
+                </ul>
             </div>
             <div class="bar-right">
                 right
