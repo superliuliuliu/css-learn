@@ -73,6 +73,62 @@
     background: url('../images/topbar_sprite.png') -190px 0;
 }
 
-
-.bar-right {
+.top-bar .bar-right {
+    display: flex;
+    align-items: center;
+    padding-right: 20px;
 }
+
+/**创作者中心样式**/
+.top-bar .bar-right .author a {
+    display: inline-block;
+    width: 90px;
+    height: 32px;
+    margin: 0 20px;
+    line-height: 32px;
+    border: 1px solid #4F4F4F;
+    color: #ccc;
+    text-align: center;
+    box-sizing: border-box;
+    border-radius: 20px;
+}
+
+.top-bar .bar-right .author a:hover {
+    border: 1px solid #fff;
+    color: #fff;
+}
+
+/**搜索框样式**/
+.top-bar .bar-right .search {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 158px;
+    height: 32px;
+    box-sizing: border-box;
+    padding-right: 10px;
+    border-radius: 32px;
+    background: #fff url('../images/topbar_sprite.png') 0 -99px;
+}
+
+/**搜索框输入框**/
+.top-bar .bar-right .search input {
+    font-size: 12px;
+    width: 120px;
+}
+
+/**登录组件样式**/
+.top-bar .bar-right .login a {
+    color: #787878
+}
+
+.top-bar .bar-right .login:hover a {
+    color: #ccc;
+}
+
+.top-bar .bar-right .login a:hover {
+    color: #787878;
+    text-decoration: underline;
+}
+
+

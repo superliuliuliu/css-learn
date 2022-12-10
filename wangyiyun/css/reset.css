@@ -6,9 +6,15 @@ body, h1, h2, h3, ul, li {
 a {
     text-decoration: none;
     color: #000;
+    outline: none;
 }
 
 /**重置列表元素的样式**/
 ul, li {
     list-style: none;
+}
+
+input {
+    outline: none;
+    border: none;
 }
