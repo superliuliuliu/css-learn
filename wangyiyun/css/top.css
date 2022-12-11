@@ -56,7 +56,7 @@
     position: absolute;
     width: 12px;
     height: 7px;
-    bottom: -1px;
+    bottom: -2px;
     left: 0;
     right: 0;
     margin: 0 auto;
@@ -130,5 +130,42 @@
     color: #787878;
     text-decoration: underline;
 }
+
+.nav {
+    height: 35px;
+    line-height: 35px;
+    background-color: #C20C0C;
+    box-sizing: border-box;
+    border-bottom: 1px solid #a40011;
+}
+
+.nav .nav-bar {
+    box-sizing: border-box;
+    padding-left: 180px;
+    margin: 0 auto;
+}
+
+.nav .nav-bar .list {
+    display: flex;
+
+}
+
+.nav-bar .list .item span {
+    /**默认情况下 inLine元素无法设置高度 所以修改为inline-block**/
+    display: inline-block;
+    padding: 0 14px;
+    margin: 7px 17px 0;
+    height: 20px;
+    line-height: 21px;
+    border-radius: 20px;
+    color: #fff;
+}
+
+.nav-bar .list .item:hover span,
+.nav-bar .list .item.active span{
+    background-color: #9B0909;
+}
+
+
 
 
