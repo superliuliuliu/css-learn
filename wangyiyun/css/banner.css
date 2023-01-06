@@ -1,0 +1,133 @@
+.banner {
+    height: 285px;
+    /** background:bg-color bg-image position/bg-size bg-repeat bg-origin bg-clip bg-attachment initial|inherit;**/
+    background: url('../images/banner_bg_1.jpeg') center center / 6000px;
+}
+
+.content {
+    position: relative;
+    height: 285px;
+    background-color: blue;
+}
+
+/*左侧轮播区域*/
+.content .content-left {
+    width: 730px;
+    position: relative;
+}
+
+/*图片列表*/
+.content .content-left .image-list {
+    display: flex;
+    overflow: hidden;
+}
+
+.content .content-left .image-list li {
+    /*不缩放*/
+    flex-shrink: 0;
+    width: 100%;
+}
+
+.content .content-left .image-list .item {
+    display: block;
+}
+
+.content .content-left .image-list .item img {
+    height: 285px;
+    width: 100%;
+    vertical-align: top;
+}
+
+/*选择器列表*/
+.content .content-left .points-list {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 5px;
+    margin: 0 auto;
+}
+
+/*选择器点的样式*/
+.content .content-left .points-list .item {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url('../images/banner_sprite.png') 3px -343px;
+    margin-left: 5px;
+}
+
+/*选择器中的点激活状态的样式*/
+.content .content-left .points-list .item.active,
+.content .content-left .points-list .item:hover {
+    background: url('../images/banner_sprite.png') -16px -343px;
+}
+
+
+/*右侧下载区域*/
+.content .content-right {
+    position: absolute;
+    right: -1px;
+    top: 0;
+    bottom: 0;
+    width: 254px;
+    background: url("../images/download_sprite.png") 0 0;
+}
+
+/*下载客户端区域*/
+.content .content-right a {
+    /*将其修改为块级元素否则大小不生效（原因a标签默认为行内元素）*/
+    display: block;
+    width: 215px;
+    height: 56px;
+    margin: 186px 0 0 19px;
+    /*文字不展示*/
+    text-indent: -9999px;
+}
+
+/*下载客户端选中状态区域*/
+.content .content-right a:hover {
+    background: url("../images/download_sprite.png") 0 -290px;
+}
+
+.content .content-right .tips {
+    margin: 10px auto;
+    text-align: center;
+    color: #8d8d8d;
+}
+
+
+/*切换器样式*/
+.content .switch-l {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -57px;
+    width: 37px;
+    height: 63px;
+    margin: auto 0;
+    background: url('../images/banner_sprite.png') 0 -360px;
+    text-indent: -9999px;
+}
+
+.content .switch-l:hover {
+    background: url('../images/banner_sprite.png') 0 -430px;
+}
+
+.content .switch-r {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: -57px;
+    width: 37px;
+    height: 63px;
+    margin: auto 0;
+    background: url('../images/banner_sprite.png') 0 -508px;
+    text-indent: -9999px;
+}
+
+.content .switch-r:hover {
+    background: url('../images/banner_sprite.png') 0 -578px;
+}
+
