@@ -17,3 +17,20 @@ body {
     width: 982px;
     margin: 0 auto;
 }
+
+.icon_sprite {
+    display: inline-block;
+    background-image: url("../images/iconall_sprite.png");
+}
+
+.icon_sprite_music {
+    background-position: 0 -24px;
+    width: 14px;
+    height: 11px;
+}
+
+.icon_sprite_play {
+    background-position: 0 0;
+    width: 16px;
+    height: 17px;
+}

@@ -7,13 +7,207 @@
     background: url("../images/main_bg.png");
 }
 
+/*-----------------------------------------------------*/
 /*左侧区域*/
 .area .area-left {
     width: 729px;
+    box-sizing: border-box;
     padding: 20px 20px 40px 20px;
 }
 
+/*-----------------------------------------------------*/
+/*左侧区域之热门推荐部分*/
+.area .area-left .recommend .content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 20px;
+}
 
+.area .area-left .recommend .content .item {
+    display: flex;
+    flex-direction: column;
+    width: 140px;
+    margin-bottom: 30px;
+}
+
+.area .area-left .recommend .content .item .cover {
+    position: relative;
+    width: 140px;
+    height: 140px;
+}
+
+.area .area-left .recommend .content .item .cover .bottom {
+    position: absolute;
+    right: 0;
+    left: 0;
+    height: 27px;
+    line-height: 27px;
+    bottom: 0;
+    color: #ccc;
+    font-size: 12px;
+    background-image: url("../images/cover_sprite.png");
+    background-position: 0 -537px;
+}
+
+.area .area-left .recommend .content .item .cover .bottom .music {
+    float: left;
+    margin: 9px 5px 9px 10px;
+}
+
+.area .area-left .recommend .content .item .cover .bottom .play-count {
+    float: left;
+    height: 11px;
+    margin: 9px 5px 15px 10px;
+}
+
+.area .area-left .recommend .content .item .cover .bottom .play {
+    position: absolute;
+    right: 10px;
+    bottom: 5px;
+}
+
+.area .area-left .recommend .content .item .desc {
+    font-size: 14px;
+    margin: 8px 0 3px 0;
+    width: 100%;
+}
+
+/*-----------------------------------------------------*/
+/*左侧区域之新碟上架部分*/
+.area .area-left .new .content {
+    height: 186px;
+    margin: 20px 0 37px 0;
+    border: 1px solid #d3d3d3;
+}
+
+.area .area-left .new .content .inner {
+    position: relative;
+    height: 100%;
+    box-sizing: border-box;
+    border: 1px solid #fff;
+    padding: 0 20px;
+    background: #f5f5f5;
+}
+
+/*实现轮播效果*/
+.area .area-left .new .content .inner .roller {
+    display: flex;
+    height: 100%;
+    overflow: hidden;
+}
+
+.area .area-left .new .content .inner .switch-left {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    left: 2px;
+    width: 17px;
+    height: 17px;
+    background: url("../images/main_login_bg.png") -260px -75px;
+    z-index: 999;
+
+}
+
+.area .area-left .new .content .inner .switch-right {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    right: 2px;
+    width: 17px;
+    height: 17px;
+    background: url("../images/main_login_bg.png") -320px -75px;
+    z-index: 999;
+
+}
+
+
+
+
+
+.area .area-left .new .content .inner .roller .album-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    flex-shrink: 0;
+}
+
+.area .area-left .new .content .inner .roller .album-list .album-item {
+    display: flex;
+    flex-direction: column;
+    width: 118px;
+    height: 150px;
+    margin-left: 11px;
+    padding-top: 25px;
+    background: url('../images/main_login_bg.png') no-repeat -260px 100px;
+}
+
+
+
+.area .area-left .new .content .inner .roller .album-list .album-item .album-cover {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin-bottom: 7px;
+}
+
+.area .area-left .new .content .inner .roller .album-list .album-item .album-cover img {
+    width: 100%;
+    height: 100%;
+}
+
+
+.area .area-left .new .content .inner .roller .album-list .album-item .album-cover .cover-background {
+    position: absolute;
+    width: 118px;
+    height: 100px;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: url('../images/cover_sprite.png') no-repeat 0 -570px;
+}
+
+.area .area-left .new .content .inner .roller .album-list .album-item .album-name {
+    width: 90%;
+    line-height: 18px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-wrap: normal;
+    color: #333;
+}
+
+.area .area-left .new .content .inner .roller .album-list .album-item .album-author {
+    width: 90%;
+    line-height: 18px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-wrap: normal;
+    color: #666;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*-----------------------------------------------------*/
 /*右侧区域*/
 .area .area-right {
     display: flex;
@@ -21,6 +215,8 @@
     width: 250px;
 }
 
+/*-----------------------------------------------------*/
+/*右侧区域之登录部分*/
 .area .area-right .user-login {
     width: 100%;
     height: 126px;
@@ -50,7 +246,9 @@
     background: url("../images/main_login_bg.png") -110px -195px;
 }
 
-/*入驻歌手样式*/
+/*-----------------------------------------------------*/
+
+/*右侧区域之入驻歌手样式*/
 .area .area-right .singer-list {
     margin-top: 15px;
     padding: 0 20px;
@@ -74,7 +272,6 @@
 .area .area-right .singer-list .header .more {
     font-size: 12px;
     color: #666;
-
 }
 
 .area .area-right .singer-list .header .more:hover {
@@ -160,6 +357,7 @@
     background: url('../images/button_sprite.png') 0 -141px;
 }
 
+/*-----------------------------------------------------*/
 /*热门主播列表*/
 .area .area-right .anchor-list {
     margin-top: 30px;
@@ -203,6 +401,7 @@
     word-wrap: normal;
     color: #666;
 }
+/*-----------------------------------------------------*/
 
 
 
